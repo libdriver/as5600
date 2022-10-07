@@ -1,0 +1,22 @@
+var searchData=
+[
+  ['as5600_5faddress_286',['AS5600_ADDRESS',['../driver__as5600_8c.html#a7209992e3a948b7b555a334984b64260',1,'driver_as5600.c']]],
+  ['as5600_5freg_5fagc_287',['AS5600_REG_AGC',['../driver__as5600_8c.html#acf303cc2514800d0d9a05102c4265e16',1,'driver_as5600.c']]],
+  ['as5600_5freg_5fangle_5fh_288',['AS5600_REG_ANGLE_H',['../driver__as5600_8c.html#aef96eb812cec620633aa1a545bea3181',1,'driver_as5600.c']]],
+  ['as5600_5freg_5fangle_5fl_289',['AS5600_REG_ANGLE_L',['../driver__as5600_8c.html#a0075d830516d08796cd8de293861a811',1,'driver_as5600.c']]],
+  ['as5600_5freg_5fburn_290',['AS5600_REG_BURN',['../driver__as5600_8c.html#a1a8e7155fa578f74296e3a7700abcedc',1,'driver_as5600.c']]],
+  ['as5600_5freg_5fconf_5fh_291',['AS5600_REG_CONF_H',['../driver__as5600_8c.html#aaca452cb921b2ace465d5e375d4d1405',1,'driver_as5600.c']]],
+  ['as5600_5freg_5fconf_5fl_292',['AS5600_REG_CONF_L',['../driver__as5600_8c.html#a9cba6c60eba4b786175a8f4a6177bcd2',1,'driver_as5600.c']]],
+  ['as5600_5freg_5fmagnitude_5fh_293',['AS5600_REG_MAGNITUDE_H',['../driver__as5600_8c.html#a5475ba4c422855891cc220a6cb7daebf',1,'driver_as5600.c']]],
+  ['as5600_5freg_5fmagnitude_5fl_294',['AS5600_REG_MAGNITUDE_L',['../driver__as5600_8c.html#a3a524bf513fda77ab4afe5906836e203',1,'driver_as5600.c']]],
+  ['as5600_5freg_5fmang_5fh_295',['AS5600_REG_MANG_H',['../driver__as5600_8c.html#af5aea171ec9872c8ef3bd067c9fda01c',1,'driver_as5600.c']]],
+  ['as5600_5freg_5fmang_5fl_296',['AS5600_REG_MANG_L',['../driver__as5600_8c.html#a7b92c8b1982f327163cc9ef420c51a00',1,'driver_as5600.c']]],
+  ['as5600_5freg_5fmpos_5fh_297',['AS5600_REG_MPOS_H',['../driver__as5600_8c.html#a5a4b897569925ba071388197e8110d1b',1,'driver_as5600.c']]],
+  ['as5600_5freg_5fmpos_5fl_298',['AS5600_REG_MPOS_L',['../driver__as5600_8c.html#af7ad315ac794a5725f22053204339a7b',1,'driver_as5600.c']]],
+  ['as5600_5freg_5fraw_5fangle_5fh_299',['AS5600_REG_RAW_ANGLE_H',['../driver__as5600_8c.html#a2d0c8a60b2d7f07119fe5f4ed68282f9',1,'driver_as5600.c']]],
+  ['as5600_5freg_5fraw_5fangle_5fl_300',['AS5600_REG_RAW_ANGLE_L',['../driver__as5600_8c.html#a73b4364c8b8aced4bb8008e3f08d6140',1,'driver_as5600.c']]],
+  ['as5600_5freg_5fstatus_301',['AS5600_REG_STATUS',['../driver__as5600_8c.html#a6b3c23dead30187a0874d9f018058343',1,'driver_as5600.c']]],
+  ['as5600_5freg_5fzmco_302',['AS5600_REG_ZMCO',['../driver__as5600_8c.html#ade0deb3ae306bb801d8cacaefb8e5437',1,'driver_as5600.c']]],
+  ['as5600_5freg_5fzpos_5fh_303',['AS5600_REG_ZPOS_H',['../driver__as5600_8c.html#a61c62ec1448e0ef0e9d05512e3408fc5',1,'driver_as5600.c']]],
+  ['as5600_5freg_5fzpos_5fl_304',['AS5600_REG_ZPOS_L',['../driver__as5600_8c.html#adb37335653bf901c2d94e86ba1da18f1',1,'driver_as5600.c']]]
+];
