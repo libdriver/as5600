@@ -78,8 +78,8 @@ uint8_t as5600(uint8_t argc, char **argv)
         else if (strcmp("-p", argv[1]) == 0)
         {
             /* print pin connection */
-            as5600_interface_debug_print("as5600: SCL connected to GPIO3.\n");
-            as5600_interface_debug_print("as5600: SDA connected to GPIO2.\n");
+            as5600_interface_debug_print("as5600: SCL connected to GPIO3(BCM).\n");
+            as5600_interface_debug_print("as5600: SDA connected to GPIO2(BCM).\n");
             
             return 0;
         }

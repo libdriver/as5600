@@ -110,8 +110,8 @@ as5600: min temperature is -40.0C.
 ```shell
 ./as5600 -p
 
-as5600: SCL connected to GPIO3.
-as5600: SDA connected to GPIO2.
+as5600: SCL connected to GPIO3(BCM).
+as5600: SDA connected to GPIO2(BCM).
 ```
 
 ```shell
