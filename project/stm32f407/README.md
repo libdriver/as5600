@@ -2,47 +2,79 @@
 
 #### 1.1 Chip Info
 
-chip name : STM32F407ZGT6.
+Chip Name: STM32F407ZGT6.
 
-extern oscillator : 8MHz.
+Extern Oscillator: 8MHz.
 
-uart pin: TX/RX PA9/PA10.
+UART Pin: TX/RX PA9/PA10.
 
-iic pin: SCL/SDA PB8/PB9.
+IIC Pin: SCL/SDA PB8/PB9.
 
-### 2. Shell
+### 2. Development and Debugging
 
-#### 2.1 Shell Parameter
+#### 2.1 Integrated Development Environment
 
-baud rate: 115200.
+LidDriver provides both Keil and IAR integrated development environment projects.
 
-data bits : 8.
+MDK is the Keil ARM project and your Keil version must be 5 or higher.Keil ARM project needs STMicroelectronics STM32F4 Series Device Family Pack and you can download from https://www.keil.com/dd2/stmicroelectronics/stm32f407zgtx.
 
-stop bits: 1.
+EW is the IAR ARM project and your IAR version must be 9 or higher.
 
-parity: none.
+#### 2.2 Serial Port Parameter
 
-flow control: none.
+Baud Rate: 115200.
+
+Data Bits : 8.
+
+Stop Bits: 1.
+
+Parity: None.
+
+Flow Control: None.
+
+#### 2.3 Serial Port Assistant
+
+We use '\n' to wrap lines.If your serial port assistant displays exceptions (e.g. the displayed content does not divide lines), please modify the configuration of your serial port assistant or replace one that supports '\n' parsing.
 
 ### 3. AS5600
 
 #### 3.1 Command Instruction
 
-​          as5600 is a basic command which can test all as5600 driver function:
+1. Show as5600 chip and driver information.
 
-​           -i        show as5600 chip and driver information.
+   ```shell
+   as5600 (-i | --information)
+   ```
 
-​           -h       show as5600 help.
+2. Show as5600 help.
 
-​           -p       show as5600 pin connections of the current board.
+   ```shell
+   as5600 (-h | --help)
+   ```
 
-​           -t (reg | read <times>)
+3. Show as5600 pin connections of the current board.
 
-​           -t reg       run as5600 register test. 
+   ```shell
+   as5600 (-p | --port)
+   ```
 
-​           -t read <times>       run as5600 read test. times is test times.
+4. Run as5600 register test. 
 
-​           -c read <times>        run as5600 read function. times is the read times.
+   ```shell
+   as5600 (-t reg | --test=reg) 
+   ```
+
+5. Run as5600 read test, times is test times.
+
+   ```shell
+   as5600 (-t read | --test=read) [--times=<num>]
+   ```
+
+6. Run as5600 read function, times is the read times.
+
+   ```shell
+   as5600 (-e read | --example=read) [--times=<num>]
+   ```
 
 #### 3.2 Command Example
 
@@ -155,15 +187,15 @@ as5600: check hysteresis ok.
 as5600: set power mode lpm3.
 as5600: check hysteresis ok.
 as5600: as5600_get_raw_angle test.
-as5600: get raw angle 1807.
+as5600: get raw angle 3405.
 as5600: as5600_get_angle test.
-as5600: get angle 400.
+as5600: get angle 1998.
 as5600: as5600_get_status test.
 as5600: get status 0xA7.
 as5600: as5600_get_agc test.
-as5600: get agc 0xD0.
+as5600: get agc 0xC4.
 as5600: as5600_get_magnitude test.
-as5600: get magnitude 2052.
+as5600: get magnitude 2064.
 as5600: as5600_angle_convert_to_register/as5600_angle_convert_to_data test.
 as5600: set angle 1840.90.
 as5600: check angle 1840.87.
@@ -171,7 +203,7 @@ as5600: finish register test.
 ```
 
 ```shell
-as5600 -t read 10
+as5600 -t read --times=10
 
 as5600: chip is AMS AS5600.
 as5600: manufacturer is AMS.
@@ -183,58 +215,62 @@ as5600: max current is 100.00mA.
 as5600: max temperature is 125.0C.
 as5600: min temperature is -40.0C.
 as5600: start read test.
-as5600: angle is 165.67 and raw angle is 1885.
-as5600: angle is 128.06 and raw angle is 1457.
-as5600: angle is 95.10 and raw angle is 1082.
-as5600: angle is 42.54 and raw angle is 484.
-as5600: angle is 349.98 and raw angle is 3982.
-as5600: angle is 286.17 and raw angle is 3256.
-as5600: angle is 233.35 and raw angle is 2655.
-as5600: angle is 158.47 and raw angle is 1803.
-as5600: angle is 94.57 and raw angle is 1076.
-as5600: angle is 12.66 and raw angle is 144.
+as5600: angle is 72.33 and raw angle is 823.
+as5600: angle is 72.33 and raw angle is 823.
+as5600: angle is 57.22 and raw angle is 651.
+as5600: angle is 35.33 and raw angle is 402.
+as5600: angle is 349.80 and raw angle is 3980.
+as5600: angle is 349.80 and raw angle is 3980.
+as5600: angle is 327.39 and raw angle is 3725.
+as5600: angle is 283.89 and raw angle is 3230.
+as5600: angle is 262.27 and raw angle is 2984.
+as5600: angle is 227.20 and raw angle is 2585.
 as5600: finish read test.
 ```
 
 ```shell
-as5600 -c read 10
+as5600 -e read --times=10
 
 as5600: 1/10.
-as5600: angle is 194.24.
+as5600: angle is 180.18.
 as5600: 2/10.
-as5600: angle is 194.24.
+as5600: angle is 151.70.
 as5600: 3/10.
-as5600: angle is 137.64.
+as5600: angle is 126.10.
 as5600: 4/10.
-as5600: angle is 95.01.
+as5600: angle is 96.83.
 as5600: 5/10.
-as5600: angle is 27.51.
+as5600: angle is 25.84.
 as5600: 6/10.
-as5600: angle is 291.18.
+as5600: angle is 342.77.
 as5600: 7/10.
-as5600: angle is 247.59.
+as5600: angle is 335.39.
 as5600: 8/10.
-as5600: angle is 247.32.
+as5600: angle is 312.01.
 as5600: 9/10.
-as5600: angle is 200.83.
+as5600: angle is 298.83.
 as5600: 10/10.
-as5600: angle is 173.06.
+as5600: angle is 260.91.
 ```
 
 ```shell
 as5600 -h
 
-as5600 -i
-	show as5600 chip and driver information.
-as5600 -h
-	show as5600 help.
-as5600 -p
-	show as5600 pin connections of the current board.
-as5600 -t reg 
-	run as5600 register test.
-as5600 -t read <times>
-	run as5600 read test.times is test times.
-as5600 -c read <times>
-	run as5600 read function.times is read times.
+Usage:
+  as5600 (-i | --information)
+  as5600 (-h | --help)
+  as5600 (-p | --port)
+  as5600 (-t reg | --test=reg)
+  as5600 (-t read | --test=read) [--times=<num>]
+  as5600 (-e read | --example=read) [--times=<num>]
+
+Options:
+  -e <read>, --example=<read>             Run the driver example.
+  -h, --help                              Show the help.
+  -i, --information                       Show the chip information.
+  -p, --port                              Display the pin connections of the current board.
+  -t <reg | read>, --test=<reg | read>    Run the driver test.
+      --times=<num>                       Set the running times.([default: 3])
+
 ```
 

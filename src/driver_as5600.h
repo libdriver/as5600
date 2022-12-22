@@ -161,10 +161,10 @@ typedef enum
  */
 typedef struct as5600_handle_s
 {
-    uint8_t (*iic_init)(void);                                                          /**< point to a iic_init function address */
-    uint8_t (*iic_deinit)(void);                                                        /**< point to a iic_deinit function address */
-    uint8_t (*iic_read)(uint8_t addr, uint8_t reg, uint8_t *buf, uint16_t len);         /**< point to a iic_read function address */
-    uint8_t (*iic_write)(uint8_t addr, uint8_t reg, uint8_t *buf, uint16_t len);        /**< point to a iic_write function address */
+    uint8_t (*iic_init)(void);                                                          /**< point to an iic_init function address */
+    uint8_t (*iic_deinit)(void);                                                        /**< point to an iic_deinit function address */
+    uint8_t (*iic_read)(uint8_t addr, uint8_t reg, uint8_t *buf, uint16_t len);         /**< point to an iic_read function address */
+    uint8_t (*iic_write)(uint8_t addr, uint8_t reg, uint8_t *buf, uint16_t len);        /**< point to an iic_write function address */
     void (*delay_ms)(uint32_t ms);                                                      /**< point to a delay_ms function address */
     void (*debug_print)(const char *const fmt, ...);                                    /**< point to a debug_print function address */
     uint8_t inited;                                                                     /**< inited flag */
@@ -199,7 +199,7 @@ typedef struct as5600_info_s
 
 /**
  * @brief     initialize as5600_handle_t structure
- * @param[in] HANDLE points to a as5600 handle structure
+ * @param[in] HANDLE points to an as5600 handle structure
  * @param[in] STRUCTURE is as5600_handle_t
  * @note      none
  */
@@ -207,39 +207,39 @@ typedef struct as5600_info_s
 
 /**
  * @brief     link iic_init function
- * @param[in] HANDLE points to a as5600 handle structure
- * @param[in] FUC points to a iic_init function address
+ * @param[in] HANDLE points to an as5600 handle structure
+ * @param[in] FUC points to an iic_init function address
  * @note      none
  */
 #define DRIVER_AS5600_LINK_IIC_INIT(HANDLE, FUC)             (HANDLE)->iic_init = FUC
 
 /**
  * @brief     link iic_deinit function
- * @param[in] HANDLE points to a as5600 handle structure
- * @param[in] FUC points to a iic_deinit function address
+ * @param[in] HANDLE points to an as5600 handle structure
+ * @param[in] FUC points to an iic_deinit function address
  * @note      none
  */
 #define DRIVER_AS5600_LINK_IIC_DEINIT(HANDLE, FUC)           (HANDLE)->iic_deinit = FUC
 
 /**
  * @brief     link iic_read function
- * @param[in] HANDLE points to a as5600 handle structure
- * @param[in] FUC points to a iic_read function address
+ * @param[in] HANDLE points to an as5600 handle structure
+ * @param[in] FUC points to an iic_read function address
  * @note      none
  */
 #define DRIVER_AS5600_LINK_IIC_READ(HANDLE, FUC)             (HANDLE)->iic_read = FUC
 
 /**
  * @brief     link iic_write function
- * @param[in] HANDLE points to a as5600 handle structure
- * @param[in] FUC points to a iic_write function address
+ * @param[in] HANDLE points to an as5600 handle structure
+ * @param[in] FUC points to an iic_write function address
  * @note      none
  */
 #define DRIVER_AS5600_LINK_IIC_WRITE(HANDLE, FUC)            (HANDLE)->iic_write = FUC
 
 /**
  * @brief     link delay_ms function
- * @param[in] HANDLE points to a as5600 handle structure
+ * @param[in] HANDLE points to an as5600 handle structure
  * @param[in] FUC points to a delay_ms function address
  * @note      none
  */
@@ -247,7 +247,7 @@ typedef struct as5600_info_s
 
 /**
  * @brief     link debug_print function
- * @param[in] HANDLE points to a as5600 handle structure
+ * @param[in] HANDLE points to an as5600 handle structure
  * @param[in] FUC points to a debug_print function address
  * @note      none
  */

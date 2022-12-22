@@ -1,24 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project>
     <fileVersion>5</fileVersion>
-    <fileChecksum>1675714415</fileChecksum>
+    <fileChecksum>4155666865</fileChecksum>
     <configuration>
         <name>Release</name>
         <outputs>
             <file>$PROJ_DIR$\..\usr\src\system_stm32f4xx.c</file>
-            <file>$PROJ_DIR$\..\usr\src\shell.c</file>
-            <file>$PROJ_DIR$\..\interface\src\clock.c</file>
-            <file>$PROJ_DIR$\..\usr\src\main.c</file>
-            <file>$PROJ_DIR$\..\interface\src\delay.c</file>
-            <file>$PROJ_DIR$\..\usr\src\stm32f4xx_it.c</file>
             <file>$PROJ_DIR$\..\usr\src\stm32f4xx_hal_msp.c</file>
-            <file>$PROJ_DIR$\..\interface\src\iic.c</file>
-            <file>$PROJ_DIR$\..\interface\src\uart.c</file>
-            <file>$PROJ_DIR$\..\..\..\test\driver_as5600_register_test.c</file>
-            <file>$PROJ_DIR$\..\..\..\src\driver_as5600.c</file>
-            <file>$PROJ_DIR$\..\driver\src\stm32f407_driver_as5600_interface.c</file>
-            <file>$PROJ_DIR$\..\..\..\test\driver_as5600_read_test.c</file>
-            <file>$PROJ_DIR$\..\..\..\example\driver_as5600_basic.c</file>
+            <file>$PROJ_DIR$\..\usr\src\shell.c</file>
+            <file>$PROJ_DIR$\..\usr\src\main.c</file>
+            <file>$PROJ_DIR$\..\usr\src\stm32f4xx_it.c</file>
+            <file>$PROJ_DIR$\..\usr\src\getopt.c</file>
         </outputs>
         <forcedrebuild>
             <name>[REBUILD_ALL]</name>

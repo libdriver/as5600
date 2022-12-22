@@ -1,7 +1,7 @@
 [English](/README.md) | [ 简体中文](/README_zh-Hans.md) | [繁體中文](/README_zh-Hant.md) | [日本語](/README_ja.md) | [Deutsch](/README_de.md) | [한국어](/README_ko.md)
 
 <div align=center>
-<img src="/doc/image/logo.png"/>
+<img src="/doc/image/logo.svg" width="400" height="150"/>
 </div>
 
 ## LibDriver AS5600
@@ -100,13 +100,13 @@ return 0;
 
 ### Dokument
 
-Online-Dokumente: https://www.libdriver.com/docs/as5600/index.html
+Online-Dokumente: [https://www.libdriver.com/docs/as5600/index.html](https://www.libdriver.com/docs/as5600/index.html).
 
-Offline-Dokumente: /doc/html/index.html
+Offline-Dokumente: /doc/html/index.html.
 
 ### Beitrag
 
-Bitte senden Sie eine E-Mail an lishifenging@outlook.com
+Bitte beachten Sie CONTRIBUTING.md.
 
 ### Lizenz
 
@@ -154,4 +154,4 @@ SOFTWARE.
 
 ### Kontaktieren Sie uns
 
-Bitte senden Sie eine E-Mail an lishifenging@outlook.com
+Bitte senden Sie eine E-Mail an lishifenging@outlook.com.
