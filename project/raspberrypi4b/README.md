@@ -99,13 +99,13 @@ find_package(as5600 REQUIRED)
    as5600 (-t reg | --test=reg) 
    ```
 
-5. Run as5600 read test, times is test times.
+5. Run as5600 read test, num is test times.
 
    ```shell
    as5600 (-t read | --test=read) [--times=<num>]
    ```
 
-6. Run as5600 read function, times is the read times.
+6. Run as5600 read function, num is the read times.
 
    ```shell
    as5600 (-e read | --example=read) [--times=<num>]
