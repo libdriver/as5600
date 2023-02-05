@@ -65,7 +65,7 @@ uint8_t as5600(uint8_t argc, char **argv)
         {"times", required_argument, NULL, 1},
         {NULL, 0, NULL, 0},
     };
-    char type[33] = "unknow";
+    char type[33] = "unknown";
     uint32_t times = 3;
     
     /* if no params */
@@ -306,7 +306,7 @@ int main(uint8_t argc, char **argv)
     }
     else
     {
-        as5600_interface_debug_print("as5600: unknow status code.\n");
+        as5600_interface_debug_print("as5600: unknown status code.\n");
     }
 
     return 0;
