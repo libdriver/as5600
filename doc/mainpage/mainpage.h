@@ -1,6 +1,6 @@
 /**
  * @mainpage  LibDriver AS5600
- * @brief     libdriver as5600 is a full function driver of as5600 and it can run in both MCU and Linux platform.
+ * @brief     LibDriver AS5600 is a full function driver of AS5600 and it can run in both MCU and Linux platform.
  * @version   1.0.0
  * @author    Shifeng Li
  *
