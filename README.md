@@ -45,7 +45,7 @@ LibDriver AS5600 is the AS5600 full function driver launched by LibDriver.It pro
 
 Reference /interface IIC platform independent template and finish your platform IIC driver.
 
-Add /src, /interface and /example to your project.
+Add the /src directory, the interface driver for your platform, and your own drivers to your project, if you want to use the default example drivers, add the /example directory to your project.
 
 ### Usage
 
