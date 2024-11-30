@@ -199,56 +199,56 @@ typedef struct as5600_info_s
 
 /**
  * @brief     initialize as5600_handle_t structure
- * @param[in] HANDLE points to an as5600 handle structure
- * @param[in] STRUCTURE is as5600_handle_t
+ * @param[in] HANDLE pointer to an as5600 handle structure
+ * @param[in] STRUCTURE as5600_handle_t
  * @note      none
  */
 #define DRIVER_AS5600_LINK_INIT(HANDLE, STRUCTURE)           memset(HANDLE, 0, sizeof(STRUCTURE))
 
 /**
  * @brief     link iic_init function
- * @param[in] HANDLE points to an as5600 handle structure
- * @param[in] FUC points to an iic_init function address
+ * @param[in] HANDLE pointer to an as5600 handle structure
+ * @param[in] FUC pointer to an iic_init function address
  * @note      none
  */
 #define DRIVER_AS5600_LINK_IIC_INIT(HANDLE, FUC)             (HANDLE)->iic_init = FUC
 
 /**
  * @brief     link iic_deinit function
- * @param[in] HANDLE points to an as5600 handle structure
- * @param[in] FUC points to an iic_deinit function address
+ * @param[in] HANDLE pointer to an as5600 handle structure
+ * @param[in] FUC pointer to an iic_deinit function address
  * @note      none
  */
 #define DRIVER_AS5600_LINK_IIC_DEINIT(HANDLE, FUC)           (HANDLE)->iic_deinit = FUC
 
 /**
  * @brief     link iic_read function
- * @param[in] HANDLE points to an as5600 handle structure
- * @param[in] FUC points to an iic_read function address
+ * @param[in] HANDLE pointer to an as5600 handle structure
+ * @param[in] FUC pointer to an iic_read function address
  * @note      none
  */
 #define DRIVER_AS5600_LINK_IIC_READ(HANDLE, FUC)             (HANDLE)->iic_read = FUC
 
 /**
  * @brief     link iic_write function
- * @param[in] HANDLE points to an as5600 handle structure
- * @param[in] FUC points to an iic_write function address
+ * @param[in] HANDLE pointer to an as5600 handle structure
+ * @param[in] FUC pointer to an iic_write function address
  * @note      none
  */
 #define DRIVER_AS5600_LINK_IIC_WRITE(HANDLE, FUC)            (HANDLE)->iic_write = FUC
 
 /**
  * @brief     link delay_ms function
- * @param[in] HANDLE points to an as5600 handle structure
- * @param[in] FUC points to a delay_ms function address
+ * @param[in] HANDLE pointer to an as5600 handle structure
+ * @param[in] FUC pointer to a delay_ms function address
  * @note      none
  */
 #define DRIVER_AS5600_LINK_DELAY_MS(HANDLE, FUC)             (HANDLE)->delay_ms = FUC
 
 /**
  * @brief     link debug_print function
- * @param[in] HANDLE points to an as5600 handle structure
- * @param[in] FUC points to a debug_print function address
+ * @param[in] HANDLE pointer to an as5600 handle structure
+ * @param[in] FUC pointer to a debug_print function address
  * @note      none
  */
 #define DRIVER_AS5600_LINK_DEBUG_PRINT(HANDLE, FUC)          (HANDLE)->debug_print = FUC
@@ -266,7 +266,7 @@ typedef struct as5600_info_s
 
 /**
  * @brief      get chip's information
- * @param[out] *info points to an as5600 info structure
+ * @param[out] *info pointer to an as5600 info structure
  * @return     status code
  *             - 0 success
  *             - 2 handle is NULL
@@ -276,7 +276,7 @@ uint8_t as5600_info(as5600_info_t *info);
 
 /**
  * @brief     initialize the chip
- * @param[in] *handle points to an as5600 handle structure
+ * @param[in] *handle pointer to an as5600 handle structure
  * @return    status code
  *            - 0 success
  *            - 1 iic initialization failed
@@ -288,7 +288,7 @@ uint8_t as5600_init(as5600_handle_t *handle);
 
 /**
  * @brief     close the chip
- * @param[in] *handle points to an as5600 handle structure
+ * @param[in] *handle pointer to an as5600 handle structure
  * @return    status code
  *            - 0 success
  *            - 1 iic deinit failed
@@ -300,9 +300,9 @@ uint8_t as5600_deinit(as5600_handle_t *handle);
 
 /**
  * @brief      read the magnetic angle
- * @param[in]  *handle points to an as5600 handle structure
- * @param[out] *angle_raw points to a raw angle buffer
- * @param[out] *deg points to a converted angle buffer
+ * @param[in]  *handle pointer to an as5600 handle structure
+ * @param[out] *angle_raw pointer to a raw angle buffer
+ * @param[out] *deg pointer to a converted angle buffer
  * @return     status code
  *             - 0 success
  *             - 1 read failed
@@ -314,9 +314,9 @@ uint8_t as5600_read(as5600_handle_t *handle, uint16_t *angle_raw, float *deg);
 
 /**
  * @brief      convert the angle to the register raw data
- * @param[in]  *handle points to an as5600 handle structure
- * @param[in]  deg is the angle
- * @param[out] *reg points to a register raw buffer
+ * @param[in]  *handle pointer to an as5600 handle structure
+ * @param[in]  deg angle
+ * @param[out] *reg pointer to a register raw buffer
  * @return     status code
  *             - 0 success
  *             - 2 handle is NULL
@@ -327,9 +327,9 @@ uint8_t as5600_angle_convert_to_register(as5600_handle_t *handle, float deg, uin
 
 /**
  * @brief      convert the register raw data to the angle
- * @param[in]  *handle points to an as5600 handle structure
- * @param[in]  reg is the register raw data
- * @param[out] *deg points to an angle buffer
+ * @param[in]  *handle pointer to an as5600 handle structure
+ * @param[in]  reg register raw data
+ * @param[out] *deg pointer to an angle buffer
  * @return     status code
  *             - 0 success
  *             - 2 handle is NULL
@@ -340,8 +340,8 @@ uint8_t as5600_angle_convert_to_data(as5600_handle_t *handle, uint16_t reg, floa
 
 /**
  * @brief     set the start position
- * @param[in] *handle points to an as5600 handle structure
- * @param[in] pos is the start position
+ * @param[in] *handle pointer to an as5600 handle structure
+ * @param[in] pos start position
  * @return    status code
  *            - 0 success
  *            - 1 set start position failed
@@ -354,8 +354,8 @@ uint8_t as5600_set_start_position(as5600_handle_t *handle, uint16_t pos);
 
 /**
  * @brief      get the start position
- * @param[in]  *handle points to an as5600 handle structure
- * @param[out] *pos points to a start position buffer
+ * @param[in]  *handle pointer to an as5600 handle structure
+ * @param[out] *pos pointer to a start position buffer
  * @return     status code
  *             - 0 success
  *             - 1 get start position failed
@@ -367,8 +367,8 @@ uint8_t as5600_get_start_position(as5600_handle_t *handle, uint16_t *pos);
 
 /**
  * @brief     set the stop position
- * @param[in] *handle points to an as5600 handle structure
- * @param[in] pos is the stop position
+ * @param[in] *handle pointer to an as5600 handle structure
+ * @param[in] pos stop position
  * @return    status code
  *            - 0 success
  *            - 1 set stop position failed
@@ -381,8 +381,8 @@ uint8_t as5600_set_stop_position(as5600_handle_t *handle, uint16_t pos);
 
 /**
  * @brief      get the stop position
- * @param[in]  *handle points to an as5600 handle structure
- * @param[out] *pos points to a stop position buffer
+ * @param[in]  *handle pointer to an as5600 handle structure
+ * @param[out] *pos pointer to a stop position buffer
  * @return     status code
  *             - 0 success
  *             - 1 get stop position failed
@@ -394,8 +394,8 @@ uint8_t as5600_get_stop_position(as5600_handle_t *handle, uint16_t *pos);
 
 /**
  * @brief     set the max angle
- * @param[in] *handle points to an as5600 handle structure
- * @param[in] ang is the max angle
+ * @param[in] *handle pointer to an as5600 handle structure
+ * @param[in] ang max angle
  * @return    status code
  *            - 0 success
  *            - 1 set max angle failed
@@ -408,8 +408,8 @@ uint8_t as5600_set_max_angle(as5600_handle_t *handle, uint16_t ang);
 
 /**
  * @brief      get the max angle
- * @param[in]  *handle points to an as5600 handle structure
- * @param[out] *ang points to a max angle buffer
+ * @param[in]  *handle pointer to an as5600 handle structure
+ * @param[out] *ang pointer to a max angle buffer
  * @return     status code
  *             - 0 success
  *             - 1 get max angle failed
@@ -421,8 +421,8 @@ uint8_t as5600_get_max_angle(as5600_handle_t *handle, uint16_t *ang);
 
 /**
  * @brief     enable or disable the watch dog
- * @param[in] *handle points to an as5600 handle structure
- * @param[in] enable is a bool value
+ * @param[in] *handle pointer to an as5600 handle structure
+ * @param[in] enable bool value
  * @return    status code
  *            - 0 success
  *            - 1 set watchdog failed
@@ -434,8 +434,8 @@ uint8_t as5600_set_watch_dog(as5600_handle_t *handle, as5600_bool_t enable);
 
 /**
  * @brief      get the watch dog status
- * @param[in]  *handle points to an as5600 handle structure
- * @param[out] *enable points to a bool value buffer
+ * @param[in]  *handle pointer to an as5600 handle structure
+ * @param[out] *enable pointer to a bool value buffer
  * @return     status code
  *             - 0 success
  *             - 1 get watchdog failed
@@ -447,8 +447,8 @@ uint8_t as5600_get_watch_dog(as5600_handle_t *handle, as5600_bool_t *enable);
 
 /**
  * @brief     set the fast filter threshold
- * @param[in] *handle points to an as5600 handle structure
- * @param[in] threshold is the fast filter threshold
+ * @param[in] *handle pointer to an as5600 handle structure
+ * @param[in] threshold fast filter threshold
  * @return    status code
  *            - 0 success
  *            - 1 set fast filter threshold failed
@@ -460,8 +460,8 @@ uint8_t as5600_set_fast_filter_threshold(as5600_handle_t *handle, as5600_fast_fi
 
 /**
  * @brief      get the fast filter threshold
- * @param[in]  *handle points to an as5600 handle structure
- * @param[out] *threshold points to a fast filter threshold buffer
+ * @param[in]  *handle pointer to an as5600 handle structure
+ * @param[out] *threshold pointer to a fast filter threshold buffer
  * @return     status code
  *             - 0 success
  *             - 1 get fast filter threshold failed
@@ -473,8 +473,8 @@ uint8_t as5600_get_fast_filter_threshold(as5600_handle_t *handle, as5600_fast_fi
 
 /**
  * @brief     set the slow filter
- * @param[in] *handle points to an as5600 handle structure
- * @param[in] filter is the slow filter
+ * @param[in] *handle pointer to an as5600 handle structure
+ * @param[in] filter slow filter
  * @return    status code
  *            - 0 success
  *            - 1 set slow filter failed
@@ -486,8 +486,8 @@ uint8_t as5600_set_slow_filter(as5600_handle_t *handle, as5600_slow_filter_t fil
 
 /**
  * @brief      get the slow filter
- * @param[in]  *handle points to an as5600 handle structure
- * @param[out] *filter points to a slow filter buffer
+ * @param[in]  *handle pointer to an as5600 handle structure
+ * @param[out] *filter pointer to a slow filter buffer
  * @return     status code
  *             - 0 success
  *             - 1 get slow filter failed
@@ -499,8 +499,8 @@ uint8_t as5600_get_slow_filter(as5600_handle_t *handle, as5600_slow_filter_t *fi
 
 /**
  * @brief     set the pwm frequency
- * @param[in] *handle points to an as5600 handle structure
- * @param[in] freq is the pwm frequency
+ * @param[in] *handle pointer to an as5600 handle structure
+ * @param[in] freq pwm frequency
  * @return    status code
  *            - 0 success
  *            - 1 set pwm frequency failed
@@ -512,8 +512,8 @@ uint8_t as5600_set_pwm_frequency(as5600_handle_t *handle, as5600_pwm_frequency_t
 
 /**
  * @brief      get the pwm frequency
- * @param[in]  *handle points to an as5600 handle structure
- * @param[out] *freq points to a pwm frequency buffer
+ * @param[in]  *handle pointer to an as5600 handle structure
+ * @param[out] *freq pointer to a pwm frequency buffer
  * @return     status code
  *             - 0 success
  *             - 1 get pwm frequency failed
@@ -525,8 +525,8 @@ uint8_t as5600_get_pwm_frequency(as5600_handle_t *handle, as5600_pwm_frequency_t
 
 /**
  * @brief     set the output stage
- * @param[in] *handle points to an as5600 handle structure
- * @param[in] stage is the output stage
+ * @param[in] *handle pointer to an as5600 handle structure
+ * @param[in] stage output stage
  * @return    status code
  *            - 0 success
  *            - 1 set output stage failed
@@ -538,8 +538,8 @@ uint8_t as5600_set_output_stage(as5600_handle_t *handle, as5600_output_stage_t s
 
 /**
  * @brief      get the output stage
- * @param[in]  *handle points to an as5600 handle structure
- * @param[out] *stage points to an output stage buffer
+ * @param[in]  *handle pointer to an as5600 handle structure
+ * @param[out] *stage pointer to an output stage buffer
  * @return     status code
  *             - 0 success
  *             - 1 get output stage failed
@@ -551,8 +551,8 @@ uint8_t as5600_get_output_stage(as5600_handle_t *handle, as5600_output_stage_t *
 
 /**
  * @brief     set the hysteresis
- * @param[in] *handle points to an as5600 handle structure
- * @param[in] hysteresis is the set hysteresis
+ * @param[in] *handle pointer to an as5600 handle structure
+ * @param[in] hysteresis input hysteresis
  * @return    status code
  *            - 0 success
  *            - 1 set hysteresis failed
@@ -564,8 +564,8 @@ uint8_t as5600_set_hysteresis(as5600_handle_t *handle, as5600_hysteresis_t hyste
 
 /**
  * @brief      get the hysteresis
- * @param[in]  *handle points to an as5600 handle structure
- * @param[out] *hysteresis points to a hysteresis buffer
+ * @param[in]  *handle pointer to an as5600 handle structure
+ * @param[out] *hysteresis pointer to a hysteresis buffer
  * @return     status code
  *             - 0 success
  *             - 1 get hysteresis failed
@@ -577,8 +577,8 @@ uint8_t as5600_get_hysteresis(as5600_handle_t *handle, as5600_hysteresis_t *hyst
 
 /**
  * @brief     set the power mode
- * @param[in] *handle points to an as5600 handle structure
- * @param[in] mode is the power mode
+ * @param[in] *handle pointer to an as5600 handle structure
+ * @param[in] mode power mode
  * @return    status code
  *            - 0 success
  *            - 1 set power mode failed
@@ -590,8 +590,8 @@ uint8_t as5600_set_power_mode(as5600_handle_t *handle, as5600_power_mode_t mode)
 
 /**
  * @brief      get the power mode
- * @param[in]  *handle points to an as5600 handle structure
- * @param[out] *mode points to a power mode buffer
+ * @param[in]  *handle pointer to an as5600 handle structure
+ * @param[out] *mode pointer to a power mode buffer
  * @return     status code
  *             - 0 success
  *             - 1 get power mode failed
@@ -603,8 +603,8 @@ uint8_t as5600_get_power_mode(as5600_handle_t *handle, as5600_power_mode_t *mode
 
 /**
  * @brief      get the raw angle
- * @param[in]  *handle points to an as5600 handle structure
- * @param[out] *ang points to an ang buffer
+ * @param[in]  *handle pointer to an as5600 handle structure
+ * @param[out] *ang pointer to an ang buffer
  * @return     status code
  *             - 0 success
  *             - 1 get raw angle failed
@@ -616,8 +616,8 @@ uint8_t as5600_get_raw_angle(as5600_handle_t *handle, uint16_t *ang);
 
 /**
  * @brief      get the angle
- * @param[in]  *handle points to an as5600 handle structure
- * @param[out] *ang points to an ang buffer
+ * @param[in]  *handle pointer to an as5600 handle structure
+ * @param[out] *ang pointer to an ang buffer
  * @return     status code
  *             - 0 success
  *             - 1 get angle failed
@@ -629,8 +629,8 @@ uint8_t as5600_get_angle(as5600_handle_t *handle, uint16_t *ang);
 
 /**
  * @brief      get the status
- * @param[in]  *handle points to an as5600 handle structure
- * @param[out] *status points to a status buffer
+ * @param[in]  *handle pointer to an as5600 handle structure
+ * @param[out] *status pointer to a status buffer
  * @return     status code
  *             - 0 success
  *             - 1 get status failed
@@ -642,8 +642,8 @@ uint8_t as5600_get_status(as5600_handle_t *handle, uint8_t *status);
 
 /**
  * @brief      get the automatic gain control
- * @param[in]  *handle points to an as5600 handle structure
- * @param[out] *agc points to an agc buffer
+ * @param[in]  *handle pointer to an as5600 handle structure
+ * @param[out] *agc pointer to an agc buffer
  * @return     status code
  *             - 0 success
  *             - 1 get agc failed
@@ -655,8 +655,8 @@ uint8_t as5600_get_agc(as5600_handle_t *handle, uint8_t *agc);
 
 /**
  * @brief      get the magnitude
- * @param[in]  *handle points to an as5600 handle structure
- * @param[out] *magnitude points to a magnitude buffer
+ * @param[in]  *handle pointer to an as5600 handle structure
+ * @param[out] *magnitude pointer to a magnitude buffer
  * @return     status code
  *             - 0 success
  *             - 1 get magnitude failed
@@ -668,8 +668,8 @@ uint8_t as5600_get_magnitude(as5600_handle_t *handle, uint16_t *magnitude);
 
 /**
  * @brief     set the burn
- * @param[in] *handle points to an as5600 handle structure
- * @param[in] burn is the set command
+ * @param[in] *handle pointer to an as5600 handle structure
+ * @param[in] burn set command
  * @return    status code
  *            - 0 success
  *            - 1 set burn failed
@@ -692,10 +692,10 @@ uint8_t as5600_set_burn(as5600_handle_t *handle, as5600_burn_t burn);
 
 /**
  * @brief     set the chip register
- * @param[in] *handle points to an as5600 handle structure
- * @param[in] reg is the iic register address
- * @param[in] *buf points to a data buffer
- * @param[in] len is the data buffer length
+ * @param[in] *handle pointer to an as5600 handle structure
+ * @param[in] reg iic register address
+ * @param[in] *buf pointer to a data buffer
+ * @param[in] len data buffer length
  * @return    status code
  *            - 0 success
  *            - 1 write failed
@@ -707,10 +707,10 @@ uint8_t as5600_set_reg(as5600_handle_t *handle, uint8_t reg, uint8_t *buf, uint1
 
 /**
  * @brief      get the chip register
- * @param[in]  *handle points to an as5600 handle structure
- * @param[in]  reg is the iic register address
- * @param[out] *buf points to a data buffer
- * @param[in]  len is the data buffer length
+ * @param[in]  *handle pointer to an as5600 handle structure
+ * @param[in]  reg iic register address
+ * @param[out] *buf pointer to a data buffer
+ * @param[in]  len data buffer length
  * @return     status code
  *             - 0 success
  *             - 1 read failed
