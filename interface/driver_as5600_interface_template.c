@@ -62,10 +62,10 @@ uint8_t as5600_interface_iic_deinit(void)
 
 /**
  * @brief      interface iic bus read
- * @param[in]  addr is iic device write address
- * @param[in]  reg is iic register address
- * @param[out] *buf points to a data buffer
- * @param[in]  len is the length of the data buffer
+ * @param[in]  addr iic device write address
+ * @param[in]  reg iic register address
+ * @param[out] *buf pointer to a data buffer
+ * @param[in]  len length of the data buffer
  * @return     status code
  *             - 0 success
  *             - 1 read failed
@@ -78,10 +78,10 @@ uint8_t as5600_interface_iic_read(uint8_t addr, uint8_t reg, uint8_t *buf, uint1
 
 /**
  * @brief     interface iic bus write
- * @param[in] addr is iic device write address
- * @param[in] reg is iic register address
- * @param[in] *buf points to a data buffer
- * @param[in] len is the length of the data buffer
+ * @param[in] addr iic device write address
+ * @param[in] reg iic register address
+ * @param[in] *buf pointer to a data buffer
+ * @param[in] len length of the data buffer
  * @return    status code
  *            - 0 success
  *            - 1 write failed
@@ -94,7 +94,7 @@ uint8_t as5600_interface_iic_write(uint8_t addr, uint8_t reg, uint8_t *buf, uint
 
 /**
  * @brief     interface delay ms
- * @param[in] ms
+ * @param[in] ms time
  * @note      none
  */
 void as5600_interface_delay_ms(uint32_t ms)
@@ -104,7 +104,7 @@ void as5600_interface_delay_ms(uint32_t ms)
 
 /**
  * @brief     interface print format data
- * @param[in] fmt is the format data
+ * @param[in] fmt format data
  * @note      none
  */
 void as5600_interface_debug_print(const char *const fmt, ...)

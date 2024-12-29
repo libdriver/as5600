@@ -61,7 +61,7 @@ uint8_t as5600_basic_init(void);
 
 /**
  * @brief      basic example read
- * @param[out] *angle points to an angle buffer
+ * @param[out] *angle pointer to an angle buffer
  * @return     status code
  *             - 0 success
  *             - 1 read failed

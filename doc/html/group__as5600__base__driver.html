@@ -613,9 +613,9 @@ Functions</h2></td></tr>
 <p>convert the register raw data to the angle </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to an as5600 handle structure </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">reg</td><td>is the register raw data </td></tr>
-    <tr><td class="paramdir">[out]</td><td class="paramname">*deg</td><td>points to an angle buffer </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to an as5600 handle structure </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">reg</td><td>register raw data </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">*deg</td><td>pointer to an angle buffer </td></tr>
   </table>
   </dd>
 </dl>
@@ -666,9 +666,9 @@ Functions</h2></td></tr>
 <p>convert the angle to the register raw data </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to an as5600 handle structure </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">deg</td><td>is the angle </td></tr>
-    <tr><td class="paramdir">[out]</td><td class="paramname">*reg</td><td>points to a register raw buffer </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to an as5600 handle structure </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">deg</td><td>angle </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">*reg</td><td>pointer to a register raw buffer </td></tr>
   </table>
   </dd>
 </dl>
@@ -703,7 +703,7 @@ Functions</h2></td></tr>
 <p>close the chip </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to an as5600 handle structure </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to an as5600 handle structure </td></tr>
   </table>
   </dd>
 </dl>
@@ -749,8 +749,8 @@ Functions</h2></td></tr>
 <p>get the automatic gain control </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to an as5600 handle structure </td></tr>
-    <tr><td class="paramdir">[out]</td><td class="paramname">*agc</td><td>points to an agc buffer </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to an as5600 handle structure </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">*agc</td><td>pointer to an agc buffer </td></tr>
   </table>
   </dd>
 </dl>
@@ -796,8 +796,8 @@ Functions</h2></td></tr>
 <p>get the angle </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to an as5600 handle structure </td></tr>
-    <tr><td class="paramdir">[out]</td><td class="paramname">*ang</td><td>points to an ang buffer </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to an as5600 handle structure </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">*ang</td><td>pointer to an ang buffer </td></tr>
   </table>
   </dd>
 </dl>
@@ -843,8 +843,8 @@ Functions</h2></td></tr>
 <p>get the fast filter threshold </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to an as5600 handle structure </td></tr>
-    <tr><td class="paramdir">[out]</td><td class="paramname">*threshold</td><td>points to a fast filter threshold buffer </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to an as5600 handle structure </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">*threshold</td><td>pointer to a fast filter threshold buffer </td></tr>
   </table>
   </dd>
 </dl>
@@ -890,8 +890,8 @@ Functions</h2></td></tr>
 <p>get the hysteresis </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to an as5600 handle structure </td></tr>
-    <tr><td class="paramdir">[out]</td><td class="paramname">*hysteresis</td><td>points to a hysteresis buffer </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to an as5600 handle structure </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">*hysteresis</td><td>pointer to a hysteresis buffer </td></tr>
   </table>
   </dd>
 </dl>
@@ -937,8 +937,8 @@ Functions</h2></td></tr>
 <p>get the magnitude </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to an as5600 handle structure </td></tr>
-    <tr><td class="paramdir">[out]</td><td class="paramname">*magnitude</td><td>points to a magnitude buffer </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to an as5600 handle structure </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">*magnitude</td><td>pointer to a magnitude buffer </td></tr>
   </table>
   </dd>
 </dl>
@@ -984,8 +984,8 @@ Functions</h2></td></tr>
 <p>get the max angle </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to an as5600 handle structure </td></tr>
-    <tr><td class="paramdir">[out]</td><td class="paramname">*ang</td><td>points to a max angle buffer </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to an as5600 handle structure </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">*ang</td><td>pointer to a max angle buffer </td></tr>
   </table>
   </dd>
 </dl>
@@ -1031,8 +1031,8 @@ Functions</h2></td></tr>
 <p>get the output stage </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to an as5600 handle structure </td></tr>
-    <tr><td class="paramdir">[out]</td><td class="paramname">*stage</td><td>points to an output stage buffer </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to an as5600 handle structure </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">*stage</td><td>pointer to an output stage buffer </td></tr>
   </table>
   </dd>
 </dl>
@@ -1078,8 +1078,8 @@ Functions</h2></td></tr>
 <p>get the power mode </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to an as5600 handle structure </td></tr>
-    <tr><td class="paramdir">[out]</td><td class="paramname">*mode</td><td>points to a power mode buffer </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to an as5600 handle structure </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">*mode</td><td>pointer to a power mode buffer </td></tr>
   </table>
   </dd>
 </dl>
@@ -1125,8 +1125,8 @@ Functions</h2></td></tr>
 <p>get the pwm frequency </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to an as5600 handle structure </td></tr>
-    <tr><td class="paramdir">[out]</td><td class="paramname">*freq</td><td>points to a pwm frequency buffer </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to an as5600 handle structure </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">*freq</td><td>pointer to a pwm frequency buffer </td></tr>
   </table>
   </dd>
 </dl>
@@ -1172,8 +1172,8 @@ Functions</h2></td></tr>
 <p>get the raw angle </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to an as5600 handle structure </td></tr>
-    <tr><td class="paramdir">[out]</td><td class="paramname">*ang</td><td>points to an ang buffer </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to an as5600 handle structure </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">*ang</td><td>pointer to an ang buffer </td></tr>
   </table>
   </dd>
 </dl>
@@ -1219,8 +1219,8 @@ Functions</h2></td></tr>
 <p>get the slow filter </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to an as5600 handle structure </td></tr>
-    <tr><td class="paramdir">[out]</td><td class="paramname">*filter</td><td>points to a slow filter buffer </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to an as5600 handle structure </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">*filter</td><td>pointer to a slow filter buffer </td></tr>
   </table>
   </dd>
 </dl>
@@ -1266,8 +1266,8 @@ Functions</h2></td></tr>
 <p>get the start position </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to an as5600 handle structure </td></tr>
-    <tr><td class="paramdir">[out]</td><td class="paramname">*pos</td><td>points to a start position buffer </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to an as5600 handle structure </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">*pos</td><td>pointer to a start position buffer </td></tr>
   </table>
   </dd>
 </dl>
@@ -1313,8 +1313,8 @@ Functions</h2></td></tr>
 <p>get the status </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to an as5600 handle structure </td></tr>
-    <tr><td class="paramdir">[out]</td><td class="paramname">*status</td><td>points to a status buffer </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to an as5600 handle structure </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">*status</td><td>pointer to a status buffer </td></tr>
   </table>
   </dd>
 </dl>
@@ -1360,8 +1360,8 @@ Functions</h2></td></tr>
 <p>get the stop position </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to an as5600 handle structure </td></tr>
-    <tr><td class="paramdir">[out]</td><td class="paramname">*pos</td><td>points to a stop position buffer </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to an as5600 handle structure </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">*pos</td><td>pointer to a stop position buffer </td></tr>
   </table>
   </dd>
 </dl>
@@ -1407,8 +1407,8 @@ Functions</h2></td></tr>
 <p>get the watch dog status </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to an as5600 handle structure </td></tr>
-    <tr><td class="paramdir">[out]</td><td class="paramname">*enable</td><td>points to a bool value buffer </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to an as5600 handle structure </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">*enable</td><td>pointer to a bool value buffer </td></tr>
   </table>
   </dd>
 </dl>
@@ -1444,7 +1444,7 @@ Functions</h2></td></tr>
 <p>get chip's information </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[out]</td><td class="paramname">*info</td><td>points to an as5600 info structure </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">*info</td><td>pointer to an as5600 info structure </td></tr>
   </table>
   </dd>
 </dl>
@@ -1478,7 +1478,7 @@ Functions</h2></td></tr>
 <p>initialize the chip </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to an as5600 handle structure </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to an as5600 handle structure </td></tr>
   </table>
   </dd>
 </dl>
@@ -1530,9 +1530,9 @@ Functions</h2></td></tr>
 <p>read the magnetic angle </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to an as5600 handle structure </td></tr>
-    <tr><td class="paramdir">[out]</td><td class="paramname">*angle_raw</td><td>points to a raw angle buffer </td></tr>
-    <tr><td class="paramdir">[out]</td><td class="paramname">*deg</td><td>points to a converted angle buffer </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to an as5600 handle structure </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">*angle_raw</td><td>pointer to a raw angle buffer </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">*deg</td><td>pointer to a converted angle buffer </td></tr>
   </table>
   </dd>
 </dl>
@@ -1578,8 +1578,8 @@ Functions</h2></td></tr>
 <p>set the burn </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to an as5600 handle structure </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">burn</td><td>is the set command </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to an as5600 handle structure </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">burn</td><td>set command </td></tr>
   </table>
   </dd>
 </dl>
@@ -1625,8 +1625,8 @@ Functions</h2></td></tr>
 <p>set the fast filter threshold </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to an as5600 handle structure </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">threshold</td><td>is the fast filter threshold </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to an as5600 handle structure </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">threshold</td><td>fast filter threshold </td></tr>
   </table>
   </dd>
 </dl>
@@ -1672,8 +1672,8 @@ Functions</h2></td></tr>
 <p>set the hysteresis </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to an as5600 handle structure </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">hysteresis</td><td>is the set hysteresis </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to an as5600 handle structure </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">hysteresis</td><td>input hysteresis </td></tr>
   </table>
   </dd>
 </dl>
@@ -1719,8 +1719,8 @@ Functions</h2></td></tr>
 <p>set the max angle </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to an as5600 handle structure </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">ang</td><td>is the max angle </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to an as5600 handle structure </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">ang</td><td>max angle </td></tr>
   </table>
   </dd>
 </dl>
@@ -1767,8 +1767,8 @@ Functions</h2></td></tr>
 <p>set the output stage </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to an as5600 handle structure </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">stage</td><td>is the output stage </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to an as5600 handle structure </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">stage</td><td>output stage </td></tr>
   </table>
   </dd>
 </dl>
@@ -1814,8 +1814,8 @@ Functions</h2></td></tr>
 <p>set the power mode </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to an as5600 handle structure </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">mode</td><td>is the power mode </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to an as5600 handle structure </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">mode</td><td>power mode </td></tr>
   </table>
   </dd>
 </dl>
@@ -1861,8 +1861,8 @@ Functions</h2></td></tr>
 <p>set the pwm frequency </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to an as5600 handle structure </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">freq</td><td>is the pwm frequency </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to an as5600 handle structure </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">freq</td><td>pwm frequency </td></tr>
   </table>
   </dd>
 </dl>
@@ -1908,8 +1908,8 @@ Functions</h2></td></tr>
 <p>set the slow filter </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to an as5600 handle structure </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">filter</td><td>is the slow filter </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to an as5600 handle structure </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">filter</td><td>slow filter </td></tr>
   </table>
   </dd>
 </dl>
@@ -1955,8 +1955,8 @@ Functions</h2></td></tr>
 <p>set the start position </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to an as5600 handle structure </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">pos</td><td>is the start position </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to an as5600 handle structure </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">pos</td><td>start position </td></tr>
   </table>
   </dd>
 </dl>
@@ -2003,8 +2003,8 @@ Functions</h2></td></tr>
 <p>set the stop position </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to an as5600 handle structure </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">pos</td><td>is the stop position </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to an as5600 handle structure </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">pos</td><td>stop position </td></tr>
   </table>
   </dd>
 </dl>
@@ -2051,8 +2051,8 @@ Functions</h2></td></tr>
 <p>enable or disable the watch dog </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to an as5600 handle structure </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">enable</td><td>is a bool value </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to an as5600 handle structure </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">enable</td><td>bool value </td></tr>
   </table>
   </dd>
 </dl>
