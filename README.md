@@ -10,7 +10,7 @@
 
 The AS5600 is an easy to program magnetic rotary position sensor with a high-resolution 12-bit analog or PWM output. This contactless system measures the absolute angle of a diametric magnetized on-axis magnet. This AS5600 is designed for contactless potentiometer applications and its robust design eliminates the influence of any homogenous external stray magnetic fields.The industry-standard I²C interface supports simple user programming of non-volatile parameters without requiring a dedicated programmer.By default the output represents a range from 0 to 360 degrees.It is also possible to define a smaller range to the output by programming a zero angle (start position) and a maximum angle (stop position).The AS5600 is also equipped with a smart low power mode feature to automatically reduce the power consumption.An input pin (DIR) selects the polarity of the output with regard to rotation direction. If DIR is connected to ground, the output value increases with clockwise rotation. If DIR is connected to VDD, the output value increases with counterclockwise rotation.
 
-LibDriver AS5600 is a full-featured driver of AS5600 launched by LibDriver.It provides magnetic angle reading and other functions. LibDriver is MISRA compliant.
+LibDriver AS5600 is a full-featured driver for AS5600, launched by LibDriver.It provides magnetic angle reading and additional features. LibDriver is MISRA compliant.
 
 ### Table of Contents
 
