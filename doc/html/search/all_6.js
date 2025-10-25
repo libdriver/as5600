@@ -1,7 +1,10 @@
 var searchData=
 [
-  ['supply_5fvoltage_5fmax_156',['SUPPLY_VOLTAGE_MAX',['../driver__as5600_8c.html#a68eba8b601afe11f1b871d944976c035',1,'driver_as5600.c']]],
-  ['supply_5fvoltage_5fmax_5fv_157',['supply_voltage_max_v',['../structas5600__info__s.html#a3d2b12bcac7a85ea8646bff9debe8660',1,'as5600_info_s']]],
-  ['supply_5fvoltage_5fmin_158',['SUPPLY_VOLTAGE_MIN',['../driver__as5600_8c.html#aac8d8cbd899667d609787ef4cf37054d',1,'driver_as5600.c']]],
-  ['supply_5fvoltage_5fmin_5fv_159',['supply_voltage_min_v',['../structas5600__info__s.html#ad8bde6ddadaf43d951e62f3befb9d35a',1,'as5600_info_s']]]
+  ['iic_5fdeinit_0',['iic_deinit',['../structas5600__handle__s.html#af6963bbad902ca6e43942b48c07986c3',1,'as5600_handle_s']]],
+  ['iic_5finit_1',['iic_init',['../structas5600__handle__s.html#a8826dd07625f8d90859ce9bd09628d61',1,'as5600_handle_s']]],
+  ['iic_5fread_2',['iic_read',['../structas5600__handle__s.html#af4ef726288b88f51a846483803a1249b',1,'as5600_handle_s']]],
+  ['iic_5fwrite_3',['iic_write',['../structas5600__handle__s.html#adca3ee7a793bbf510d5267daf0fcf1c5',1,'as5600_handle_s']]],
+  ['inited_4',['inited',['../structas5600__handle__s.html#a19bedf28d2b9748f6a62d9ae93f4e68f',1,'as5600_handle_s']]],
+  ['interface_5',['interface',['../structas5600__info__s.html#aebaa6c28dd4f2c3dc27566fcb910fd28',1,'as5600_info_s']]],
+  ['interface_20driver_20function_6',['as5600 interface driver function',['../group__as5600__interface__driver.html',1,'']]]
 ];
