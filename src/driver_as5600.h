@@ -139,9 +139,9 @@ typedef enum
  */
 typedef enum
 {
-    AS5600_STATUS_MD = (1 << 5),        /**< agc minimum gain overflow, magnet too strong */
+    AS5600_STATUS_MD = (1 << 5),        /**< magnet was detected */
     AS5600_STATUS_ML = (1 << 4),        /**< agc maximum gain overflow, magnet too weak */
-    AS5600_STATUS_MH = (1 << 3),        /**< magnet was detected */
+    AS5600_STATUS_MH = (1 << 3),        /**< agc minimum gain overflow, magnet too strong */
 } as5600_status_t;
 
 /**
